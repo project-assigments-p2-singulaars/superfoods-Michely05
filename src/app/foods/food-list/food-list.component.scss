@@ -1,0 +1,28 @@
+#food-container{
+    width: 50vw;
+    border: 1px solid blue;
+    img {
+        width: 30vw;
+    }
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#food-cards{
+    border: 1px solid black;
+    margin: 5rem;
+}
+
+h2 {
+    border: 1px solid black;
+}
+
+p {
+    border: 1px solid black;
+}
+
+img {
+    border: 1px solid black;
+}

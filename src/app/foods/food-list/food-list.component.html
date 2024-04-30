@@ -1,0 +1,9 @@
+<div id="food-container">
+    @for(food of foods | foodFilter: searchText; track food.id){
+    <div id="food-cards">
+        <h2>{{food.name}}</h2>
+        <p>{{food.calories}} cal</p>
+        <img src="{{food.image}}">
+    </div>
+    }
+</div>
