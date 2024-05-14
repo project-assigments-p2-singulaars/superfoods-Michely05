@@ -1,0 +1,27 @@
+<button type="button" (click)="toggle()">Add New Food</button>
+<form [formGroup]="foodForm" (ngSubmit)="onSubmit()" [class.hidden]="hide">
+    <div>
+        <label for="foodName"> <input type="text" formControlName="foodName" />Name</label>
+        @if(foodFormControl.foodName.touched &&
+        foodFormControl.foodName.errors?.["required"]){
+        <p>Food name is required</p>
+        }
+    </div>
+    <div>
+        <label for="caloriesNumber"> <input type="number" formControlName="caloriesNumber" />Calories Number</label>
+        @if(foodFormControl.caloriesNumber.touched &&
+        foodFormControl.caloriesNumber.errors?.["required"]){
+        <p>Calories are required</p>
+        }@if (foodFormControl.caloriesNumber.touched &&
+        foodFormControl.caloriesNumber.errors?.["pattern"]) {
+        <p>Calories must be valid numbers</p>
+        }
+    </div>
+    <div>
+        <label for="foodImage"> <input type="url" formControlName="foodImage" />Upload image (URL format only)</label>
+        @if(foodFormControl.foodImage.touched && foodFormControl.foodImage.errors?.["pattern"]) {
+        <p>Image must be uploaded with a valid URL</p>
+        }
+    </div>
+    <button type="submit">Add Food</button>
+</form>

@@ -1,2 +1,3 @@
 <app-search-bar (searchResult)="setSearchText($event)"></app-search-bar>
+<app-food-form (formSent)="showNewFood($event)"></app-food-form>
 <app-food-list [searchText]="searchText"></app-food-list>
