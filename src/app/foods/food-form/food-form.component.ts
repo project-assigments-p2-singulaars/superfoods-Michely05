@@ -1,18 +1,33 @@
 import { Component, EventEmitter, Output } from '@angular/core';
+import { MatIconModule } from '@angular/material/icon';
+import { MatSelectModule } from '@angular/material/select';
+import { MatInputModule } from '@angular/material/input';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatButtonModule } from '@angular/material/button';
 import {
   FormBuilder,
   FormGroup,
   FormsModule,
-  NgForm,
   ReactiveFormsModule,
   Validators,
 } from '@angular/forms';
 import { Foods } from '../../shared/interfaces/foods';
+import { CommonModule, NgIf } from '@angular/common';
 
 @Component({
   selector: 'app-food-form',
   standalone: true,
-  imports: [ReactiveFormsModule, FormsModule],
+  imports: [
+    ReactiveFormsModule,
+    FormsModule,
+    MatButtonModule,
+    MatIconModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatSelectModule,
+    CommonModule,
+    NgIf,
+  ],
   templateUrl: './food-form.component.html',
   styleUrl: './food-form.component.scss',
 })
@@ -28,8 +43,14 @@ export class FoodFormComponent {
   constructor(private fb: FormBuilder) {
     this.foodForm = this.fb.group({
       foodName: ['', [Validators.required]],
-      caloriesNumber: ['', [Validators.pattern('^[0-9]*$')]],
-      foodImage: ['', [Validators.pattern('^https?:\\/\\/.+\\..+$')]],
+      caloriesNumber: [
+        '',
+        [Validators.required, Validators.pattern('^[0-9]*$')],
+      ],
+      foodImage: [
+        '',
+        [Validators.required, Validators.pattern('^https?:\\/\\/.+\\..+$')],
+      ],
     });
   }
   get foodFormControl() {

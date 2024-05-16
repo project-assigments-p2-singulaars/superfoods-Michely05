@@ -1,4 +1,7 @@
-<div id="search-container">
-    <h2>Search</h2>
-    <input [(ngModel)]="searchText" type="text" (keyup)="getInputValue()" placeholder="Busca un alimento">
+<div class="search-container">
+    <h2>Super Foods! 🍽️</h2>
+    <mat-form-field class="search-input">
+        <mat-label>Type food of choice</mat-label>
+        <input matInput type="text" [(ngModel)]="searchText" (keyup)="getInputValue()">
+    </mat-form-field>
 </div>

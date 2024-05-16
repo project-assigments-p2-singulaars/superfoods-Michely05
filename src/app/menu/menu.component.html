@@ -1,9 +1,16 @@
-<h2>Menu - Calories {{totalCalories()}}</h2>
-<ul>
-    @for(food of menu();track $index){
-    <li>
-        <h2>{{food.name}}</h2>
-        <p>{{food.calories}} cal</p>
-    </li>
-    }
-</ul>
+<div class="menu-container">
+    <h2>Menu - Calories {{totalCalories}}</h2>
+    <ul>
+        @for(food of menu();track $index){
+        <li>
+            <div>
+                <h2>{{food.name}} x{{food.quantity}}</h2>
+                <p>{{food.calories}} cal</p>
+            </div>
+            <div>
+                <img src="{{food.image}}" alt="{{food.name}}" class="food-image">
+            </div>
+        </li>
+        }
+    </ul>
+</div>

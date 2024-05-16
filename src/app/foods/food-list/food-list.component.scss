@@ -1,28 +1,66 @@
-#food-container{
-    width: 50vw;
-    border: 1px solid blue;
-    img {
-        width: 30vw;
-    }
+#food-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    justify-content: center;
+    margin-bottom: 3rem;
+}
+
+.food-image {
+    display: block;
+    border-radius: 10px;
+    margin-top: 10px;
+    object-fit: cover;
+    height: 300px;
+    width: 400px;
+}
+
+.food-image:hover{
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+}
+
+mat-card {
+    max-width: 500px;
+    margin: 16px;
     display: flex;
     flex-direction: column;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    padding: 1rem;
+}
+
+mat-card-title {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+mat-card-content p {
+    margin-top: 0.2rem;
+    color: #F0A202;
+    font-weight: 600;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1.2rem;
+}
+
+mat-card-content div {
+    overflow: hidden;
+}
+
+#food-container .item-button {
+    display: table-cell;
     justify-content: center;
-    align-items: center;
+    background-color: #F0A202;
+    height: 3rem;
+    width: 13rem;
+    border-radius: 25px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1rem;
+    margin: 1rem;
 }
 
-#food-cards{
-    border: 1px solid black;
-    margin: 5rem;
-}
+#food-container .item-button:hover {
+    background-color: #f6c767;
+  }
 
-h2 {
-    border: 1px solid black;
-}
-
-p {
-    border: 1px solid black;
-}
-
-img {
-    border: 1px solid black;
-}

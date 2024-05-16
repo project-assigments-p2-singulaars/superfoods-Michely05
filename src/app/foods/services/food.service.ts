@@ -17,6 +17,6 @@ export class FoodService {
   }
 
   addNewFood(food: Foods) {
-    foods.push(food);
+    foods.unshift(food);
   }
 }

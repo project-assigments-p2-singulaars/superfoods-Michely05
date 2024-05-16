@@ -1,10 +1,12 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { MatGridListModule } from '@angular/material/grid-list';
 import { FoodListComponent } from './foods/food-list/food-list.component';
 import { SearchBarComponent } from './search-bar/search-bar.component';
 import { FoodFormComponent } from './foods/food-form/food-form.component';
 import { Foods } from './shared/interfaces/foods';
 import { FoodService } from './foods/services/food.service';
+import { MenuComponent } from './menu/menu.component';
 
 @Component({
   selector: 'app-root',
@@ -14,6 +16,8 @@ import { FoodService } from './foods/services/food.service';
     FoodListComponent,
     SearchBarComponent,
     FoodFormComponent,
+    MenuComponent,
+    MatGridListModule,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',

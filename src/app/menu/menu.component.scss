@@ -1,0 +1,42 @@
+.menu-container{
+    // border: 1px solid red;
+    padding: 3rem;
+}
+
+ul {
+    width: 30rem;
+    margin-top: 3rem;
+    border-radius: 15px;
+}
+
+li {
+    list-style-type: none;
+    margin: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+h2 {
+    font-size: 2rem;
+    padding-top: 1rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+}
+
+p {
+    padding-bottom: 1rem;
+    color: #F0A202;
+    font-weight: 600;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1.2rem;
+}
+
+.food-image{
+    display: block;
+    border-radius: 10px;
+    object-fit: cover;
+    height: 100px;
+    width: 200px;
+}
+
