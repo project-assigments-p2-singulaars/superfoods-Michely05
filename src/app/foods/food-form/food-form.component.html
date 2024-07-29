@@ -1,0 +1,33 @@
+<div class="form-container">
+    <button mat-flat-button color="primary" type="button" class="form-button-1" (click)="toggle()">Add New Food</button>
+
+    <form [formGroup]="foodForm" (ngSubmit)="onSubmit()" [class.hidden]="hide">
+        <mat-form-field>
+            <mat-label>Name</mat-label>
+            <input matInput formControlName="foodName" id="foodName" class="inputName">
+            <mat-error *ngIf="foodFormControl.foodName.touched && foodFormControl.foodName.errors?.['required']">
+                Food name is required!
+            </mat-error>
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>Calories Number</mat-label>
+            <input matInput type="number" formControlName="caloriesNumber" id="caloriesNumber">
+            <mat-error
+                *ngIf="foodFormControl.caloriesNumber.touched && foodFormControl.caloriesNumber.errors?.['required']">
+                Calories are required!
+            </mat-error>
+            <mat-error
+                *ngIf="foodFormControl.caloriesNumber.touched && foodFormControl.caloriesNumber.errors?.['pattern']">
+                Calories must be valid numbers!
+            </mat-error>
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>Upload image (URL format only)</mat-label>
+            <input matInput type="url" formControlName="foodImage" id="foodImage">
+            <mat-error *ngIf="foodFormControl.foodImage.touched && foodFormControl.foodImage.errors?.['required']">
+                Image must be uploaded with a valid URL!
+            </mat-error>
+        </mat-form-field>
+        <button mat-flat-button color="primary" type="submit" class="form-button-2">Submit</button>
+    </form>
+</div>

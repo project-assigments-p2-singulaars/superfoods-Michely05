@@ -1,0 +1,33 @@
+.search-container{
+    height: 25vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 1rem;
+    gap: 3rem;
+    background-color: #CCDAD1;
+}
+
+h2{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 3rem;
+    color: rgb(42, 42, 42);
+}
+
+.mat-form-field {
+    width: 45%;
+}
+
+.search-input {
+    display: flex;
+    justify-content: center;
+    width: 40%;
+    outline: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+}
+

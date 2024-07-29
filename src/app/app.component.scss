@@ -1,0 +1,33 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:host {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    height: 100vh;
+    width: 99vw;
+    grid-template-areas: 
+        "search search"
+        "form menu"
+        "foodlist menu";
+}
+
+app-search-bar {
+    grid-area: search;
+}
+
+app-food-form {
+    grid-area: form;
+}
+
+app-menu {
+    grid-area: menu;
+}
+
+app-food-list {
+    grid-area: foodlist;
+}

@@ -1,0 +1,19 @@
+<div id="food-container">
+    @for(food of foods | foodFilter: searchText; track food.id){
+    <mat-card>
+        <mat-card-header>
+            <mat-card-title>{{food.name}}</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+            <p>{{food.calories}} cal</p>
+            <div class="image-container">
+                <img src="{{food.image}}" alt="{{food.name}}" class="food-image">
+            </div>
+        </mat-card-content>
+        <mat-card-actions>
+            <button mat-flat-button color="primary" (click)="addToMenu(food)" type="submit" class="item-button">Add food
+                to menu</button>
+        </mat-card-actions>
+    </mat-card>
+    }
+</div>
